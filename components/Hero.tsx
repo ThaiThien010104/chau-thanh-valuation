@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="pt-8 flex items-center gap-6 text-sm text-gray-500 font-medium">
              <div className="flex items-center gap-2">
-               <CheckCircle2 size={16} className="text-[#D97706]" /> 5+ Năm kinh nghiệm
+               <CheckCircle2 size={16} className="text-[#D97706]" /> 8+ Năm kinh nghiệm
              </div>
              <div className="flex items-center gap-2">
                <CheckCircle2 size={16} className="text-[#D97706]" /> Mạng lưới rộng khắp

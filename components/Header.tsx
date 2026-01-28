@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="w-full bg-white shadow-sm sticky top-0 z-50">
       {/* Top Bar - Thông tin liên hệ nhanh */}
@@ -38,20 +41,52 @@ const Header = () => {
           <Link href="/services" className="hover:text-[#D97706] transition-colors">Dịch vụ</Link>
           <Link href="/news" className="hover:text-[#D97706] transition-colors">Tin tức</Link>
           <Link href="/contact" className="hover:text-[#D97706] transition-colors">Liên hệ</Link>
+          <Link href="/careers" className="hover:text-[#D97706] transition-colors">Tuyển dụng</Link>
         </nav>
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className="bg-[#0F172A] text-white px-5 py-2.5 rounded hover:bg-[#D97706] transition-colors font-medium  ">
-            Gửi yêu cầu
-          </button>
+          <Link href="/contact">
+            <button className="bg-[#0F172A] text-white px-5 py-2.5 rounded hover:bg-[#D97706] transition-colors font-medium  ">
+              Gửi yêu cầu
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button (Icon) */}
-        <button className="md:hidden text-gray-700">
-          <Menu size={28} />
+        <button className="md:hidden text-gray-700" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white border-t border-gray-200">
+          <nav className="container mx-auto px-4 py-4 space-y-3 font-medium text-gray-700">
+            <Link href="/" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Trang chủ
+            </Link>
+            <Link href="/about" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Giới thiệu
+            </Link>
+            <Link href="/services" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Dịch vụ
+            </Link>
+            <Link href="/news" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Tin tức
+            </Link>
+            <Link href="/contact" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Liên hệ
+            </Link>
+            <Link href="/careers" className="block py-2 px-3 hover:bg-gray-100 rounded hover:text-[#D97706] transition-colors">
+              Tuyển dụng
+            </Link>
+            <button className="w-full mt-4 bg-[#0F172A] text-white px-5 py-2.5 rounded hover:bg-[#D97706] transition-colors font-medium">
+              Gửi yêu cầu
+            </button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 };

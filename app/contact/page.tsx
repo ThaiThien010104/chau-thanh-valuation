@@ -306,7 +306,7 @@ export default function Contact() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
-              <div className="text-4xl font-bold text-[#D97706] mb-2">28+</div>
+              <div className="text-4xl font-bold text-[#D97706] mb-2">8+</div>
               <p className="text-gray-700 font-semibold">Năm kinh nghiệm</p>
             </div>
             <div className="p-6">

@@ -74,7 +74,7 @@ export default function About() {
               <h2 className="text-4xl font-bold text-[#003366] mb-6">
                 Về Châu Thành
               </h2>
-              <div className="w-20 h-1 bg-[#FF9900] mb-8"></div>
+              <div className="w-65 h-1 bg-[#FF9900] mb-8"></div>
 
               {/* Introduction */}
               <p className="text-lg text-gray-700 leading-relaxed mb-8">

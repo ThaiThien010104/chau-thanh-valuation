@@ -21,7 +21,7 @@ export default function Services() {
     },
     {
       id: 2,
-      icon: <img src="/img/Dongsan.png" alt="Động Sản" className="w-15 h-15 object-cover" />,
+      icon: <img src="/img/dongsan.png" alt="Động Sản" className="w-15 h-15 object-cover" />,
       title: 'Động Sản',
       items: [
         'Máy móc thiết bị',

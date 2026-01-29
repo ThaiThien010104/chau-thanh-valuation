@@ -49,7 +49,7 @@ const Hero = () => {
         {/* Right Content - Image */}
         <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-gradient-to-br from-[#0F172A] to-blue-900">
           <img 
-            src="/img/anh1.jpg" 
+            src="/img/anh1.png" 
             alt="Hồ sơ thẩm định giá"
             className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
           />

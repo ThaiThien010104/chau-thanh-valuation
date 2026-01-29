@@ -11,22 +11,29 @@ const Footer = () => {
           
           {/* Column 1: Company Info */}
           <div className="space-y-4">
-            <h3 className="text-white text-lg font-bold uppercase tracking-wider">Châu Thành Valuation</h3>
+            <h3 className="text-white text-lg font-bold uppercase tracking-wider">CÔNG TY TNHH TƯ VẤN VÀ ĐỊNH GIÁ CHÂU THÀNH</h3>
+            <p className="leading-relaxed text-gray-300">
+              CHAU THANH CONSULTING AND APPRAISAL COMPANY LIMITED — <span className="font-semibold text-[#D97706]">CTAPPRAISAL</span>
+            </p>
             <p className="leading-relaxed text-gray-400">
-              Đối tác tin cậy hàng đầu trong lĩnh vực Thẩm định giá và Tư vấn đầu tư. Cam kết Chính xác - Khách quan - Hiệu quả.
+              Đối tác tin cậy hàng đầu trong lĩnh vực Thẩm định giá và Tư vấn đầu tư. Cam kết <span className="text-[#D97706] font-semibold">Chính xác - Khách quan - Hiệu quả</span>.
             </p>
             <div className="pt-4 space-y-3">
                <p className="flex items-start gap-3">
                  <MapPin size={18} className="text-[#D97706] mt-0.5 shrink-0" />
-                 <span>41 Trần Nhân Tôn, Quận 5, TP.HCM</span>
+                 <span>30/1F Ấp Đông, Xã Thới Tam Thôn, Huyện Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam</span>
                </p>
                <p className="flex items-center gap-3">
                  <Phone size={18} className="text-[#D97706] shrink-0" />
-                 <span>028 3710 9889</span>
+                 <span><a href="tel:0938300096" className="hover:text-white">0938.300.096</a> (Giám đốc: Nguyễn Nhân Quyền) / <a href="tel:0909300096" className="hover:text-white">0909.300.096</a></span>
                </p>
                <p className="flex items-center gap-3">
                  <Mail size={18} className="text-[#D97706] shrink-0" />
-                 <span>thamdinhgiachauthanh@gmail.com</span>
+                 <span><a href="mailto:info@chau-thanh.com.vn" className="hover:text-white">info@chau-thanh.com.vn</a></span>
+               </p>
+               <p className="flex items-center gap-3">
+                 <span className="text-[#D97706] font-semibold">Website:</span>
+                 <a href="https://www.chau-thanh.com.vn" className="hover:text-white">www.chau-thanh.com.vn</a>
                </p>
             </div>
           </div>
@@ -76,9 +83,9 @@ const Footer = () => {
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
           <p>© 2024 Chau Thanh Valuation. All rights reserved.</p>
           <div className="flex gap-6 mt-2 md:mt-0">
-            <span>Mã số thuế: 0315094259</span>
-            <a href="#" className="hover:text-white">Chính sách bảo mật</a>
-            <a href="#" className="hover:text-white">Điều khoản sử dụng</a>
+            <span>Mã số thuế (MST): <span className="font-semibold text-white">0315094259</span></span>
+            <a href="/privacy" className="hover:text-white">Chính sách bảo mật</a>
+            <a href="/terms" className="hover:text-white">Điều khoản sử dụng</a>
           </div>
         </div>
       </div>

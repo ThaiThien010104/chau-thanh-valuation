@@ -79,13 +79,11 @@ const newsDatabase = [
   },
 ];
 
-// Function to get news detail by ID
 function getNewsDetail(id: string) {
-  const article = newsDatabase.find((item) => item.id == id);
-  return article || newsDatabase[0]; // Return first article if ID not found
+  const article = newsDatabase.find((item) => item.id === id);
+  return article || newsDatabase[0];
 }
 
-// Related news (mock) - returns articles except the current one
 function getRelatedNews(currentId: string, limit: number = 3) {
   return newsDatabase.filter((item) => item.id != currentId).slice(0, limit);
 }
@@ -98,10 +96,8 @@ export default function NewsDetail({ params }: { params: { id: string } }) {
     <main className="min-h-screen bg-white">
       <Header />
 
-      {/* Page Header Banner */}
       <section className="bg-gradient-to-r from-[#0F172A] to-[#1E293B] text-white py-16">
         <div className="container mx-auto px-4">
-          {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-gray-300 mb-6">
             <Link href="/" className="hover:text-[#D97706] transition">
               Trang chủ

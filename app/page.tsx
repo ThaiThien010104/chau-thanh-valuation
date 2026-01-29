@@ -92,7 +92,7 @@ export default function Home() {
             Cần tư vấn hoặc định giá?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Liên hệ với Châu Thành ngay để nhận tư vấn miễn phí từ các chuyên gia
+            Liên hệ với Châu Thành ngay để nhận tư vấn từ các chuyên gia
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

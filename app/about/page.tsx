@@ -51,7 +51,7 @@ export default function About() {
             {/* Left Column - Image */}
             <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image 
-                src="/images/about/team-professional.jpg"
+                src="/img/team-professional.png"
                 alt="Đội ngũ Châu Thành Valuation"
                 fill
                 className="object-cover"

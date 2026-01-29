@@ -47,7 +47,7 @@ export default function Contact() {
     'Xác định Giá trị Doanh nghiệp',
     'Tư vấn Dự án đầu tư',
     'Bán đấu giá tài sản',
-    khác,
+    'khác',
   ];
 
   return (

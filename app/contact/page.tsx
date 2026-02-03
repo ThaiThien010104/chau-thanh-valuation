@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import Link from 'next/link';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,7 +16,14 @@ export default function Contact() {
     message: '',
   });
 
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('txENS5gBW7d-QCXfA');
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -23,21 +31,43 @@ export default function Contact() {
       ...prev,
       [name]: value,
     }));
+    setError(''); // Clear error when user starts typing
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({
-      fullName: '',
-      phone: '',
-      email: '',
-      service: '',
-      message: '',
-    });
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+    setError('');
+
+    try {
+      await emailjs.send(
+        'service_0ppmni3',
+        'template_gptabik',
+        {
+          user_name: formData.fullName,
+          user_phone: formData.phone,
+          user_email: formData.email,
+          user_service: formData.service,
+          message: formData.message,
+        }
+      );
+
+      alert('Cảm ơn bạn! Yêu cầu đã được gửi thành công.');
+      setSubmitted(true);
+      setFormData({
+        fullName: '',
+        phone: '',
+        email: '',
+        service: '',
+        message: '',
+      });
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      setError('Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const services = [
@@ -47,6 +77,7 @@ export default function Contact() {
     'Xác định Giá trị Doanh nghiệp',
     'Tư vấn Dự án đầu tư',
     'Bán đấu giá tài sản',
+    'khác',
   ];
 
   return (
@@ -79,7 +110,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold text-[#0F172A] mb-2">
                   Thông tin liên hệ
                 </h2>
-                <div className="w-12 h-1 bg-[#D97706]"></div>
+                <div className="w-60 h-1 bg-[#D97706]"></div>
               </div>
 
               {/* Company Name */}
@@ -168,7 +199,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold text-[#0F172A] mb-2">
                   Gửi yêu cầu tư vấn
                 </h2>
-                <div className="w-12 h-1 bg-[#D97706]"></div>
+                <div className="w-68 h-1 bg-[#D97706]"></div>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -279,11 +310,20 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#0F172A] text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2 group"
+                  disabled={loading}
+                  className="w-full bg-[#0F172A] text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   <Send className="h-5 w-5 group-hover:translate-x-1 transition" />
-                  Gửi yêu cầu
+                  {loading ? 'Đang gửi...' : 'Gửi yêu cầu'}
                 </button>
+
+                {/* Error Message */}
+                {error && (
+                  <div className="p-4 bg-red-50 border-l-4 border-red-500 text-red-700 rounded">
+                    <p className="font-medium">✗ Lỗi</p>
+                    <p className="text-sm mt-1">{error}</p>
+                  </div>
+                )}
 
                 {/* Success Message */}
                 {submitted && (

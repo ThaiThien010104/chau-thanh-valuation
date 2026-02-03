@@ -36,7 +36,7 @@ const Branches = () => {
               </div>
               <p className="text-gray-700 text-sm mb-4 h-10">{branch.address}</p>
               <div className="flex items-center gap-2 text-sm text-gray-600 border-t border-gray-300 pt-4">
-                 <Phone size={14} /> <span>0876 775 168</span>
+                 <Phone size={14} /> <span>0938 300 096</span>
               </div>
             </div>
           ))}

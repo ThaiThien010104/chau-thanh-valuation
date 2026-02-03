@@ -41,7 +41,7 @@ const Header = () => {
           <Link href="/contact" className="hover:text-[#FF9900] transition-colors">Liên hệ</Link>
           <Link href="/careers" className="hover:text-[#FF9900] transition-colors">Tuyển dụng</Link>
         </nav>
-
+    
         {/* CTA Button */}
         <div className="hidden md:block">
           <Link href="/contact">

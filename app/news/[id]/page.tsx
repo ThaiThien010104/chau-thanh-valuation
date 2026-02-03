@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import { Calendar, User, Folder, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -11,6 +12,7 @@ const newsDatabase = [
     date: '20/01/2026',
     category: 'Thị trường',
     author: 'Nguyễn Nhân Quyền',
+    image: '/img/tintuc1.jpg',
     content: `
       <p>Theo báo cáo mới nhất từ Châu Thành Valuation, thị trường bất động sản TP.HCM đang cho thấy những dấu hiệu khởi sắc trong quý đầu năm 2026. Với sự phục hồi của nền kinh tế, các dự án bất động sản tiếp tục thu hút sự quan tâm của các nhà đầu tư.</p>
 
@@ -46,6 +48,7 @@ const newsDatabase = [
     title: 'Quy định mới về Thẩm định giá đất có hiệu lực từ tháng 2',
     date: '15/01/2026',
     category: 'Quy định',
+    image: '/img/tintuc2.jpg',
     author: 'Trần Minh Hải',
     content: `
       <p>Bộ Tài nguyên và Môi trường vừa công bố quy định mới về thẩm định giá đất, có hiệu lực từ ngày 1/2/2026. Đây là bản cập nhật quan trọng so với quy định hiện hành.</p>
@@ -64,6 +67,7 @@ const newsDatabase = [
     title: 'Châu Thành khai trương chi nhánh mới tại Bình Dương',
     date: '10/01/2026',
     category: 'Nội bộ',
+    image: '/img/team-professional.png',
     author: 'Lê Thị Thanh Hương',
     content: `
       <p>Công ty TNHH Tư vấn và Định giá Châu Thành vừa khai trương chi nhánh mới tại Bình Dương, mở rộng mạng lưới phục vụ khách hàng.</p>
@@ -77,6 +81,78 @@ const newsDatabase = [
       <p>Khai trương chi nhánh Bình Dương đánh dấu một bước phát triển quan trọng của Châu Thành trong việc mở rộng phạm vi hoạt động.</p>
     `,
   },
+  {
+    id: '4',
+    title: 'Bảng giá đất 2026: Điểm mới ảnh hưởng đến định giá',
+    date: '05/01/2026',
+    category: 'Pháp lý',
+    image: '/img/tintuc4.jpg',
+    author: 'Phòng Nghiên cứu & Pháp chế',
+    content: `
+      <p>Bước sang năm 2026, bảng giá đất mới của nhiều địa phương được điều chỉnh theo khung giá cập nhật, tạo ra tác động trực tiếp đến hoạt động thẩm định giá tài sản.</p>
+
+      <h3>Những thay đổi đáng chú ý</h3>
+      <p>Nhiều quận/huyện ghi nhận mức điều chỉnh tăng từ 8-15% cho khu vực mặt tiền, trong khi khu vực đường nội bộ có mức tăng thấp hơn. Các tuyến đường mới mở và các khu vực phát triển hạ tầng được điều chỉnh rõ rệt.</p>
+
+      <h3>Tác động đến hồ sơ thẩm định</h3>
+      <p>Giá đất mới ảnh hưởng đến phương pháp so sánh và chi phí, đặc biệt trong các hồ sơ liên quan đến chuyển nhượng, thế chấp và định giá phục vụ đầu tư.</p>
+
+      <ul>
+        <li>Tài sản có vị trí chiến lược sẽ ghi nhận mức giá tham chiếu cao hơn</li>
+        <li>Dự án đang triển khai chịu ảnh hưởng bởi điều chỉnh hệ số vị trí</li>
+        <li>Hồ sơ định giá cần cập nhật dữ liệu giao dịch mới nhất</li>
+      </ul>
+
+      <p>Châu Thành Valuation đã cập nhật cơ sở dữ liệu thị trường và quy trình thẩm định để đảm bảo kết quả phản ánh đúng quy định hiện hành.</p>
+    `,
+  },
+  {
+    id: '5',
+    title: 'Xu hướng định giá tài sản công nghiệp đầu năm 2026',
+    date: '02/01/2026',
+    category: 'Thị trường',
+    image: '/img/tintuc5.jpg',
+    author: 'Ngô Minh Quân',
+    content: `
+      <p>Thị trường tài sản công nghiệp đầu năm 2026 ghi nhận nhu cầu tăng mạnh từ nhóm nhà đầu tư sản xuất và logistics, kéo theo yêu cầu định giá nhà xưởng và dây chuyền máy móc ngày càng cao.</p>
+
+      <h3>Động lực chính</h3>
+      <p>Sự dịch chuyển chuỗi cung ứng, mở rộng khu công nghiệp và tăng trưởng thương mại điện tử khiến các nhà máy hiện hữu và dự án mới đều cần thẩm định giá để phục vụ huy động vốn và M&A.</p>
+
+      <h3>Nhóm tài sản được quan tâm</h3>
+      <ul>
+        <li>Nhà xưởng và kho bãi quy mô lớn</li>
+        <li>Dây chuyền sản xuất ngành gỗ, dệt may, thực phẩm</li>
+        <li>Máy móc thiết bị y tế và công nghiệp phụ trợ</li>
+      </ul>
+
+      <p>Châu Thành Valuation áp dụng kết hợp phương pháp chi phí và thu nhập để phản ánh chính xác giá trị hiện tại của tài sản công nghiệp.</p>
+    `,
+  },
+  {
+    id: '6',
+    title: 'Hướng dẫn chuẩn bị hồ sơ thẩm định giá doanh nghiệp',
+    date: '28/12/2025',
+    category: 'Hướng dẫn',
+    image: '/img/tintuc6.jpg',
+    author: 'Phòng Tư vấn Doanh nghiệp',
+    content: `
+      <p>Định giá doanh nghiệp là bước quan trọng trong cổ phần hóa, gọi vốn hoặc M&A. Việc chuẩn bị hồ sơ đầy đủ giúp rút ngắn thời gian và nâng cao độ chính xác trong quá trình thẩm định.</p>
+
+      <h3>Hồ sơ cần chuẩn bị</h3>
+      <ul>
+        <li>Báo cáo tài chính đã kiểm toán 3 năm gần nhất</li>
+        <li>Hồ sơ pháp lý doanh nghiệp và giấy phép hoạt động</li>
+        <li>Danh mục tài sản cố định, công cụ dụng cụ</li>
+        <li>Hợp đồng kinh tế lớn và các nghĩa vụ tài chính</li>
+      </ul>
+
+      <h3>Lưu ý quan trọng</h3>
+      <p>Dữ liệu tài chính cần được chuẩn hóa và đối chiếu với thực tế hoạt động. Các khoản nợ tiềm ẩn và nghĩa vụ ngoài bảng cân đối cần được khai báo rõ ràng.</p>
+
+      <p>Châu Thành Valuation hỗ trợ tư vấn chuẩn bị hồ sơ và lựa chọn phương pháp thẩm định phù hợp cho từng loại hình doanh nghiệp.</p>
+    `,
+  },
 ];
 
 function getNewsDetail(id: string) {
@@ -88,9 +164,10 @@ function getRelatedNews(currentId: string, limit: number = 3) {
   return newsDatabase.filter((item) => item.id != currentId).slice(0, limit);
 }
 
-export default function NewsDetail({ params }: { params: { id: string } }) {
-  const article = getNewsDetail(params.id);
-  const relatedNews = getRelatedNews(params.id);
+export default async function NewsDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const article = getNewsDetail(id);
+  const relatedNews = getRelatedNews(id);
 
   return (
     <main className="min-h-screen bg-white">
@@ -142,6 +219,21 @@ export default function NewsDetail({ params }: { params: { id: string } }) {
                   </div>
                 </div>
               </div>
+
+              {/* Article Featured Image */}
+              {article.image && (
+                <div className="mb-10 rounded-lg overflow-hidden shadow-lg">
+                  <div className="relative w-full h-96 md:h-96">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Article Content */}
               <div className="prose prose-lg max-w-none text-gray-700">
@@ -226,9 +318,20 @@ export default function NewsDetail({ params }: { params: { id: string } }) {
                       href={`/news/${news.id}`}
                       className="group block p-4 rounded-lg border border-gray-200 hover:border-[#D97706] hover:bg-gray-50 transition-all"
                     >
-                      {/* Thumbnail Placeholder */}
-                      <div className="mb-3 h-32 bg-gradient-to-br from-gray-300 to-gray-400 rounded flex items-center justify-center text-white/20 text-2xl font-bold">
-                        IMG
+                      {/* Thumbnail */}
+                      <div className="mb-3 h-32 bg-gray-200 rounded overflow-hidden relative">
+                        {news.image ? (
+                          <Image
+                            src={news.image}
+                            alt={news.title}
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        ) : (
+                          <div className="flex items-center justify-center w-full h-full text-white/20 text-2xl font-bold">
+                            IMG
+                          </div>
+                        )}
                       </div>
 
                       {/* Title */}

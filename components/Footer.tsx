@@ -21,11 +21,11 @@ const Footer = () => {
             <div className="pt-4 space-y-3">
                <p className="flex items-start gap-3">
                  <MapPin size={18} className="text-[#D97706] mt-0.5 shrink-0" />
-                 <span>30/1F Ấp Đông, Xã Thới Tam Thôn, Huyện Hóc Môn, Thành phố Hồ Chí Minh, Việt Nam</span>
+                 <span>41 Trần Nhân Tôn, Quận 5 , Thành phố Hồ Chí Minh, Việt Nam</span>
                </p>
                <p className="flex items-center gap-3">
                  <Phone size={18} className="text-[#D97706] shrink-0" />
-                 <span><a href="tel:0938300096" className="hover:text-white">0938.300.096</a> (Giám đốc: Nguyễn Nhân Quyền) / <a href="tel:0909300096" className="hover:text-white">0909.300.096</a></span>
+                 <span><a href="tel:0938300096" className="hover:text-white"> 0938.300.096</a> <br /> (Giám đốc: Nguyễn Nhân Quyền) <a href="tel:0909300096" className="hover:text-white"></a></span>
                </p>
                <p className="flex items-center gap-3">
                  <Mail size={18} className="text-[#D97706] shrink-0" />
@@ -81,7 +81,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 bg-[#020617] py-4">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>© 2024 Chau Thanh Valuation. All rights reserved.</p>
+          <p>© 2026 Chau Thanh Valuation. All rights reserved.</p>
           <div className="flex gap-6 mt-2 md:mt-0">
             <span>Mã số thuế (MST): <span className="font-semibold text-white">0315094259</span></span>
             <a href="/privacy" className="hover:text-white">Chính sách bảo mật</a>

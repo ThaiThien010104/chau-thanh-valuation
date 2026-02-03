@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ChevronLeft, ChevronRight, Calendar, Folder } from 'lucide-react';
@@ -16,6 +17,7 @@ export default function News() {
       date: '20/01/2026',
       category: 'Thị trường',
       excerpt: 'Theo báo cáo mới nhất từ Châu Thành Valuation, thị trường bất động sản TP.HCM đang cho thấy những dấu hiệu khởi sắc trong quý đầu năm 2026...',
+      image: '/img/tintuc1.jpg',
     },
     {
       id: 2,
@@ -23,6 +25,7 @@ export default function News() {
       date: '15/01/2026',
       category: 'Quy định',
       excerpt: 'Bộ Tài nguyên và Môi trường vừa công bố quy định mới về thẩm định giá đất, có hiệu lực từ ngày 1/2/2026. Các thẩm định viên cần chú ý...',
+      image: '/img/tintuc2.jpg',
     },
     {
       id: 3,
@@ -30,6 +33,7 @@ export default function News() {
       date: '10/01/2026',
       category: 'Nội bộ',
       excerpt: 'Công ty TNHH Tư vấn và Định giá Châu Thành vừa khai trương chi nhánh mới tại Bình Dương, mở rộng mạng lưới phục vụ khách hàng...',
+      image: '/img/team-professional.png',
     },
     {
       id: 4,
@@ -37,6 +41,7 @@ export default function News() {
       date: '05/01/2026',
       category: 'Thị trường',
       excerpt: 'Bất động sản công nghiệp tiếp tục là lĩnh vực hút vốn đầu tư lớn trong năm 2026. Các khu công nghiệp tiếp tục mở rộng và nâng cấp...',
+      image: '/img/tintuc4.jpg',
     },
     {
       id: 5,
@@ -44,6 +49,7 @@ export default function News() {
       date: '28/12/2025',
       category: 'Tư vấn',
       excerpt: 'Châu Thành Valuation chia sẻ hướng dẫn chi tiết về cách thẩm định giá máy móc thiết bị cũ theo tiêu chuẩn quốc tế...',
+      image: '/img/tintuc5.jpg',
     },
     {
       id: 6,
@@ -51,6 +57,7 @@ export default function News() {
       date: '20/12/2025',
       category: 'Tư vấn',
       excerpt: 'Với nhiều thương vụ sáp nhập dự kiến diễn ra, định giá doanh nghiệp chính xác là yếu tố quyết định. Chuyên gia Châu Thành chia sẻ...',
+      image: '/img/tintuc6.jpg',
     },
   ];
 
@@ -108,11 +115,14 @@ export default function News() {
                 key={news.id}
                 className="group rounded-lg overflow-hidden border border-gray-200 hover:border-[#D97706] hover:shadow-xl transition-all duration-300"
               >
-                {/* Image Placeholder */}
+                {/* Image */}
                 <div className="h-48 bg-gradient-to-br from-gray-300 to-gray-400 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#0F172A] to-blue-900 opacity-80 flex items-center justify-center text-white/20 text-4xl font-bold">
-                    IMG
-                  </div>
+                  <Image
+                    src={news.image}
+                    alt={news.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   <div className="absolute top-4 right-4 z-10">
                     <span
                       className={`inline-block px-3 py-1 rounded text-xs font-semibold ${getCategoryColor(

@@ -299,9 +299,6 @@ export default function Services() {
           {/* Desktop - Horizontal Timeline */}
           <div className="hidden lg:block">
             <div className="relative">
-              {/* Connection Line */}
-              <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-[#003366] via-[#FF9900] to-[#003366]"></div>
-
               <div className="grid grid-cols-6 gap-4 relative">
                 {[
                   {
@@ -309,59 +306,59 @@ export default function Services() {
                     icon: <ClipboardCheck className="w-8 h-8" />,
                     title: 'Tiếp nhận yêu cầu',
                     titleEn: 'Receive Request',
-                    description: 'Tiếp nhận thông tin và yêu cầu từ khách hàng',
+                    description: 'Tiếp nhận thông tin và yêu cầu thẩm định từ khách hàng',
                   },
                   {
                     step: '02',
                     icon: <FileSearch className="w-8 h-8" />,
-                    title: 'Phân tích sơ bộ',
-                    titleEn: 'Preliminary Analysis',
-                    description: 'Phân tích hồ sơ và lên kế hoạch thẩm định',
+                    title: 'Phân tích sơ bộ & Lên kế hoạch',
+                    titleEn: 'Preliminary Analysis & Planning',
+                    description: 'Phân tích hồ sơ, phạm vi và lập kế hoạch triển khai',
                   },
                   {
                     step: '03',
                     icon: <MapPin className="w-8 h-8" />,
-                    title: 'Khảo sát thực tế',
-                    titleEn: 'Site Survey',
-                    description: 'Triển khai thẩm định và khảo sát tài sản',
+                    title: 'Triển khai thẩm định & Khảo sát thực tế',
+                    titleEn: 'Site Survey & Valuation',
+                    description: 'Khảo sát thực tế và thu thập dữ liệu tài sản',
                   },
                   {
                     step: '04',
                     icon: <MessageSquare className="w-8 h-8" />,
-                    title: 'Hội ý chuyên gia',
-                    titleEn: 'Expert Consultation',
-                    description: 'Lựa chọn phương pháp và tư vấn chuyên gia',
+                    title: 'Lựa chọn phương pháp & Hội ý chuyên gia',
+                    titleEn: 'Method Selection & Expert Consultation',
+                    description: 'Chọn phương pháp phù hợp và hội ý chuyên gia',
                   },
                   {
                     step: '05',
                     icon: <FileEdit className="w-8 h-8" />,
-                    title: 'Kiểm soát chất lượng',
-                    titleEn: 'Quality Control',
-                    description: 'Lên dự thảo báo cáo và kiểm tra chất lượng',
+                    title: 'Lên dự thảo & Kiểm soát chất lượng',
+                    titleEn: 'Drafting & QC',
+                    description: 'Lên dự thảo báo cáo và kiểm soát chất lượng',
                   },
                   {
                     step: '06',
                     icon: <Send className="w-8 h-8" />,
-                    title: 'Phát hành & Giao',
-                    titleEn: 'Issue & Delivery',
-                    description: 'Phát hành chứng thư và gửi khách hàng',
+                    title: 'Phát hành chứng thư & Gửi khách hàng',
+                    titleEn: 'Issue Certificate & Delivery',
+                    description: 'Phát hành chứng thư và bàn giao cho khách hàng',
                   },
                 ].map((process, index) => (
                   <div key={index} className="relative">
                     {/* Step Card */}
-                    <div className="bg-white rounded-xl shadow-lg border-2 border-gray-200 hover:border-[#FF9900] transition-all duration-300 p-6 text-center group hover:shadow-2xl">
+                    <div className="bg-white rounded-xl shadow-lg border-2 border-gray-200 hover:border-[#003366] transition-all duration-300 p-6 text-center group hover:shadow-2xl">
                       {/* Step Number Badge */}
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-[#003366] to-[#004d99] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg border-4 border-white group-hover:scale-110 transition-transform">
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-[#003366] text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg border-4 border-white group-hover:scale-110 transition-transform">
                         {process.step}
                       </div>
 
                       {/* Icon */}
-                      <div className="mt-8 mb-4 inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#003366] to-[#004d99] text-white rounded-xl group-hover:from-[#FF9900] group-hover:to-[#cc7a00] transition-all duration-300">
+                      <div className="mt-8 mb-4 inline-flex items-center justify-center w-16 h-16 bg-[#003366] text-white rounded-xl transition-all duration-300">
                         {process.icon}
                       </div>
 
                       {/* Title */}
-                      <h3 className="font-bold text-[#003366] mb-1 text-base group-hover:text-[#FF9900] transition-colors">
+                      <h3 className="font-bold text-[#003366] mb-1 text-base">
                         {process.title}
                       </h3>
                       <p className="text-xs text-gray-500 uppercase tracking-wide mb-3">
@@ -376,8 +373,8 @@ export default function Services() {
 
                     {/* Arrow */}
                     {index < 5 && (
-                      <div className="absolute top-20 -right-3 z-10">
-                        <ArrowRight className="w-6 h-6 text-[#FF9900]" />
+                      <div className="absolute top-1/2 -right-5 z-10 -translate-y-1/2">
+                        <ArrowRight className="w-6 h-6 text-[#003366]" />
                       </div>
                     )}
                   </div>
@@ -394,60 +391,60 @@ export default function Services() {
                 icon: <ClipboardCheck className="w-8 h-8" />,
                 title: 'Tiếp nhận yêu cầu',
                 titleEn: 'Receive Request',
-                description: 'Tiếp nhận thông tin và yêu cầu từ khách hàng',
+                description: 'Tiếp nhận thông tin và yêu cầu thẩm định từ khách hàng',
               },
               {
                 step: '02',
                 icon: <FileSearch className="w-8 h-8" />,
                 title: 'Phân tích sơ bộ & Lên kế hoạch',
                 titleEn: 'Preliminary Analysis & Planning',
-                description: 'Phân tích hồ sơ và lên kế hoạch thẩm định chi tiết',
+                description: 'Phân tích hồ sơ, phạm vi và lập kế hoạch triển khai',
               },
               {
                 step: '03',
                 icon: <MapPin className="w-8 h-8" />,
                 title: 'Triển khai thẩm định & Khảo sát thực tế',
                 titleEn: 'Site Survey & Valuation',
-                description: 'Triển khai thẩm định và khảo sát tài sản thực tế',
+                description: 'Khảo sát thực tế và thu thập dữ liệu tài sản',
               },
               {
                 step: '04',
                 icon: <MessageSquare className="w-8 h-8" />,
                 title: 'Lựa chọn phương pháp & Hội ý chuyên gia',
                 titleEn: 'Method Selection & Expert Consultation',
-                description: 'Lựa chọn phương pháp thẩm định và tư vấn chuyên gia',
+                description: 'Chọn phương pháp phù hợp và hội ý chuyên gia',
               },
               {
                 step: '05',
                 icon: <FileEdit className="w-8 h-8" />,
                 title: 'Lên dự thảo & Kiểm soát chất lượng',
-                titleEn: 'Drafting & Quality Control',
-                description: 'Lên dự thảo báo cáo và kiểm tra chất lượng',
+                titleEn: 'Drafting & QC',
+                description: 'Lên dự thảo báo cáo và kiểm soát chất lượng',
               },
               {
                 step: '06',
                 icon: <Send className="w-8 h-8" />,
                 title: 'Phát hành chứng thư & Gửi khách hàng',
                 titleEn: 'Issue Certificate & Delivery',
-                description: 'Phát hành chứng thư thẩm định và gửi khách hàng',
+                description: 'Phát hành chứng thư và bàn giao cho khách hàng',
               },
             ].map((process, index) => (
               <div key={index} className="relative">
                 <div className="flex gap-4">
                   {/* Left - Step Number & Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#003366] to-[#004d99] text-white rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 bg-[#003366] text-white rounded-xl flex items-center justify-center shadow-lg">
                       {process.icon}
                     </div>
                     <div className="mt-2 text-center">
-                      <span className="inline-block px-3 py-1 bg-[#FF9900] text-white text-sm font-bold rounded-full">
+                      <span className="inline-block px-3 py-1 bg-[#003366] text-white text-sm font-bold rounded-full">
                         {process.step}
                       </span>
                     </div>
                   </div>
 
                   {/* Right - Content */}
-                  <div className="flex-grow bg-white rounded-lg border-2 border-gray-200 p-4 shadow-sm hover:border-[#FF9900] hover:shadow-lg transition-all">
+                  <div className="flex-grow bg-white rounded-lg border-2 border-gray-200 p-4 shadow-sm hover:border-[#003366] hover:shadow-lg transition-all">
                     <h3 className="font-bold text-[#003366] mb-1">
                       {process.title}
                     </h3>
@@ -462,7 +459,7 @@ export default function Services() {
 
                 {/* Connecting Line */}
                 {index < 5 && (
-                  <div className="ml-8 h-6 w-1 bg-gradient-to-b from-[#FF9900] to-[#003366]"></div>
+                  <div className="ml-8 h-6 w-1 bg-[#003366]"></div>
                 )}
               </div>
             ))}
@@ -559,7 +556,7 @@ export default function Services() {
           {/* Standards Badge */}
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-3 bg-white border-2 border-[#003366] px-6 py-4 rounded-full shadow-lg">
-              <div className="w-3 h-3 bg-[#FF9900] rounded-full animate-pulse"></div>
+              <div className="w-3 h-3 bg-[#00FF00] rounded-full animate-pulse"></div>
               <p className="text-sm font-semibold text-[#003366]">
                 ✓ Tuân thủ đầy đủ Hệ thống Tiêu chuẩn Thẩm định giá Việt Nam
               </p>

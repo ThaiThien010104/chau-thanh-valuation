@@ -61,7 +61,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#003366] mb-4">Dịch vụ Thẩm định giá</h2>
-          <div className="w-20 h-1 bg-[#FF9900] mx-auto"></div>
+          <div className="w-95 h-1 bg-[#FF9900] mx-auto"></div>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
             Cung cấp giải pháp định giá toàn diện với độ chính xác cao nhất cho đối tác và khách hàng.
           </p>

@@ -21,7 +21,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#0F172A] mb-4">Tại sao chọn Châu Thành?</h2>
-            <div className="w-20 h-1 bg-[#D97706] mx-auto"></div>
+            <div className="w-110 h-1 bg-[#D97706] mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">

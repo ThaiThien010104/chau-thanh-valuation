@@ -51,7 +51,7 @@ export default function About() {
             {/* Left Column - Image */}
             <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image 
-                src="/images/about/team-professional.jpg"
+                src="/img/team-professional.png"
                 alt="Đội ngũ Châu Thành Valuation"
                 fill
                 className="object-cover"
@@ -74,7 +74,7 @@ export default function About() {
               <h2 className="text-4xl font-bold text-[#003366] mb-6">
                 Về Châu Thành
               </h2>
-              <div className="w-20 h-1 bg-[#FF9900] mb-8"></div>
+              <div className="w-65 h-1 bg-[#FF9900] mb-8"></div>
 
               {/* Introduction */}
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
@@ -118,7 +118,7 @@ export default function About() {
           <h2 className="text-4xl font-bold text-[#003366] text-center mb-6">
             Giá trị Cốt lõi
           </h2>
-          <div className="w-20 h-1 bg-[#FF9900] mx-auto mb-12"></div>
+          <div className="w-60 h-1 bg-[#FF9900] mx-auto mb-12"></div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {coreValues.map((value) => (

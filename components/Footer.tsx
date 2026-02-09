@@ -25,7 +25,7 @@ const Footer = () => {
                </p>
                <p className="flex items-center gap-3">
                  <Phone size={18} className="text-[#D97706] shrink-0" />
-                 <span><a href="tel:0938300096" className="hover:text-white"> 0938.300.096</a> <br /> (Giám đốc: Nguyễn Nhân Quyền) <a href="tel:0909300096" className="hover:text-white"></a></span>
+                 <span><a href="tel:0938300096" className="hover:text-white"> 0938.300.096</a> <br /> (Chủ tịch kiêm Tổng giám đốc : Nguyễn Nhân Quyền) <a href="tel:0909300096" className="hover:text-white"></a></span>
                </p>
                <p className="flex items-center gap-3">
                  <Mail size={18} className="text-[#D97706] shrink-0" />

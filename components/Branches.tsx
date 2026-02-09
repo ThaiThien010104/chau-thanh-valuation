@@ -3,7 +3,7 @@ import { MapPin, Phone } from 'lucide-react';
 
 const Branches = () => {
   const branches = [
-    { city: "TP. Hồ Chí Minh", address: "41 Trần Nhật Tôn, Quận 5", active: true },
+    { city: "TP. Hồ Chí Minh", address: "41 Trần Nhân Tôn, Quận 5", active: true },
     { city: "Tây Ninh", address: "PG02-18, Vincom Shophouse Tây Ninh", active: true },
     { city: "Vĩnh Long", address: "Số 55E, Phạm Thái Bường, Phường 4", active: true },
     { city: "An Giang", address: "Lô L4-09, KĐT Golden City, Long Xuyên", active: true },

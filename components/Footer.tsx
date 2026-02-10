@@ -33,7 +33,7 @@ const Footer = () => {
                </p>
                <p className="flex items-center gap-3">
                  <span className="text-[#D97706] font-semibold">Website:</span>
-                 <a href="https://www.chau-thanh.com.vn" className="hover:text-white">www.chau-thanh.com.vn</a>
+                 <a href="https://chau-thanh.com.vn" className="hover:text-white">www.chau-thanh.com.vn</a>
                </p>
             </div>
           </div>

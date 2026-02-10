@@ -148,10 +148,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-[#0F172A] mb-1">Hotline</h4>
                   <a
-                    href="tel:02837109889"
+                    href="tel:0938300096"
                     className="text-gray-600 hover:text-[#D97706] transition font-medium"
                   >
-                    028 3710 9889
+                    093 8300 096
                   </a>
                   <p className="text-sm text-gray-500 mt-1">Thứ 2 - Thứ 6: 8:00 - 17:00</p>
                 </div>
@@ -167,10 +167,10 @@ export default function Contact() {
                 <div>
                   <h4 className="font-semibold text-[#0F172A] mb-1">Email</h4>
                   <a
-                    href="mailto:thamdinhgiachauthanh@gmail.com"
+                    href="mailto:info@chau-thanh.com.vn"
                     className="text-gray-600 hover:text-[#D97706] transition font-medium break-all"
                   >
-                    thamdinhgiachauthanh@gmail.com
+                    info@chau-thanh.com.vn
                   </a>
                 </div>
               </div>

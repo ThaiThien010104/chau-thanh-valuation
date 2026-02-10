@@ -28,7 +28,7 @@ const Header = () => {
            <img src="/img/logo.jpg" alt="logo" className='w-12 h-auto'/>
            <div>
              <h1 className="text-xl font-bold text-[#003366] uppercase leading-none">Châu Thành</h1>
-             <p className="text-xs text-gray-600 font-medium tracking-wider">ĐỊNH GIÁ & TƯ VẤN</p>
+             <p className="text-xs text-gray-600 font-medium tracking-wider">TƯ VẤN VÀ ĐỊNH GIÁ</p>
            </div>
         </div>
 

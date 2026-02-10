@@ -169,7 +169,7 @@ export default function About() {
 
               <div className="border-b border-gray-700 pb-4">
                 <p className="text-sm text-gray-400 uppercase tracking-wide mb-2">Ngày Thành lập</p>
-                <p className="text-lg font-semibold">04/06/2018</p>
+                <p className="text-lg font-semibold">06/06/2018</p>
               </div>
 
               <div className="border-b border-gray-700 pb-4">

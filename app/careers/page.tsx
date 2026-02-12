@@ -156,7 +156,7 @@ export default function Careers() {
                   </div>
 
                   <Link
-                    href="#"
+                    href="/contact"
                     className="flex-shrink-0 px-6 py-3 bg-[#D97706] text-white rounded-lg font-semibold hover:bg-orange-600 transition inline-flex items-center gap-2 whitespace-nowrap"
                   >
                     Xem chi tiết
